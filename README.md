@@ -7,11 +7,12 @@ Este repositório implementa a abordagem Deep k-Means (DKM), abordando os desafi
 
 Duas variantes são exploradas nos experimentos: Annealing (DKMa) e Pretrained (DKMp).
 
-- **DKMa:** Utiliza uma estratégia de recuo para α sem pré-treinamento. A evolução de α segue uma sequência recursiva projetada para gastar mais iterações em valores menores, preservando uma inclinação suave.
+Certamente, aqui estão as fórmulas reescritas em Markdown:
 
-  αₙ₊₁ = 2¹/log(ₙ)² * αₙ com mₐ = α₁ = 0.1
+- **DKMa:** Utiliza uma estratégia de recuo para $\alpha$ sem pré-treinamento. A evolução de $\alpha$ segue uma sequência recursiva projetada para gastar mais iterações em valores menores, preservando uma inclinação suave.
+$\alpha_{n+1} = 2^{1/log(n)^2} + \alpha_n$ com $m_\alpha = \alpha_1= 0.1$
 
-- **DKMp:** Inicializado pelo pré-treinamento de um autoencoder, seguido pelo agrupamento conjunto com um α constante (mₐ = Mₐ = 1000). Um α elevado resulta em atribuições de cluster rígidas.
+- **DKMp:** Inicializado pelo pré-treinamento de um autoencoder, seguido pelo agrupamento conjunto com um $\alpha$ constante ($m_\alpha = M_\alpha = 1000$). Um $\alpha$ elevado resulta em atribuições de cluster rígidas.
 
 A lógica por trás dessas escolhas é fornecer flexibilidade na adaptação de α para obter resultados aprimorados de agrupamento.
 
